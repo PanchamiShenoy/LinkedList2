@@ -87,17 +87,40 @@ public class LinkedList<K> {
 		System.out.println("the data deleted is" + curNode.getKey());
 		prevNode.setNext(null);
 	}
-public void search(K key) {
-	INode<K> tempNode = head;
-	int count=0;
-	while(tempNode != null) {
-		count++;
-		if (tempNode.getKey().equals(key)){
-			System.out.println(key+"is at "+count+"position");
+
+	/**
+	 * to search the element position
+	 * 
+	 * @param key
+	 */
+	public INode<K> search(K key) {
+		INode<K> tempNode = head;
+		int count = 0;
+		while (tempNode != null) {
+			count++;
+			if (tempNode.getKey().equals(key)) {
+				System.out.println(key + "is at " + count + "position");
+				return tempNode;
+			}
+			tempNode = tempNode.getNext();
+
 		}
-		tempNode = tempNode.getNext();
+		return null;
 	}
-}
+
+	/**
+	 * insert new node after specified element
+	 * 
+	 * @param key
+	 * @param newNode
+	 */
+	public void insertAfter(K key, INode<K> newNode) {
+		INode<K> temp = search(key);
+		INode<K> next = temp.getNext();
+		temp.setNext(newNode);
+		newNode.setNext(next);
+	}
+
 	/**
 	 * method to print nodes
 	 */

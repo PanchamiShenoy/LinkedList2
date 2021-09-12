@@ -39,12 +39,12 @@ public class LinkedListTest {
 		LinkedList.insert(2, mySecondNode);
 		LinkedList.printMyNodes();
 	}
-	public static void deleteFront()
-	{
+
+	public static void deleteFront() {
 		Node<Integer> myFirstNode = new Node<>(70);
 		Node<Integer> mySecondNode = new Node<>(30);
 		Node<Integer> myThirdNode = new Node<>(56);
-		
+
 		LinkedList<Integer> LinkedList = new LinkedList<Integer>();
 		LinkedList.addFront(myFirstNode);
 		LinkedList.addFront(mySecondNode);
@@ -52,12 +52,12 @@ public class LinkedListTest {
 		LinkedList.deleteFront();
 		LinkedList.printMyNodes();
 	}
-	public static void deleteLast()
-	{
+
+	public static void deleteLast() {
 		Node<Integer> myFirstNode = new Node<>(70);
 		Node<Integer> mySecondNode = new Node<>(30);
 		Node<Integer> myThirdNode = new Node<>(56);
-		
+
 		LinkedList<Integer> LinkedList = new LinkedList<Integer>();
 		LinkedList.addFront(myFirstNode);
 		LinkedList.addFront(mySecondNode);
@@ -65,12 +65,12 @@ public class LinkedListTest {
 		LinkedList.deleteLast();
 		LinkedList.printMyNodes();
 	}
-	public static void search()
-	{
+
+	public static void search() {
 		Node<Integer> myFirstNode = new Node<>(70);
 		Node<Integer> mySecondNode = new Node<>(30);
 		Node<Integer> myThirdNode = new Node<>(56);
-		
+
 		LinkedList<Integer> LinkedList = new LinkedList<Integer>();
 		LinkedList.addFront(myFirstNode);
 		LinkedList.append(mySecondNode);
@@ -79,15 +79,27 @@ public class LinkedListTest {
 		LinkedList.printMyNodes();
 	}
 
+	public static void insertAfter() {
+		Node<Integer> myFirstNode = new Node<>(70);
+		Node<Integer> mySecondNode = new Node<>(30);
+		Node<Integer> myThirdNode = new Node<>(56);
+
+		LinkedList<Integer> LinkedList = new LinkedList<Integer>();
+		LinkedList.addFront(myFirstNode);
+		LinkedList.append(myThirdNode);
+		LinkedList.insertAfter(70, mySecondNode);
+		LinkedList.printMyNodes();
+	}
+
 	public static void main(String[] args) {
 		// createLinkedlist();
 		// addNewNode();
 		// appendNode();
-		//insertBetween();
-		//deleteFront();
-		//deleteLast();
-		search();
-		
+		// insertBetween();
+		// deleteFront();
+		// deleteLast();
+		// search();
+		insertAfter();
 	}
 
 }
