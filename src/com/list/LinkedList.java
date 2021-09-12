@@ -11,6 +11,24 @@ public class LinkedList<K> {
 	}
 
 	/**
+	 * to element at front
+	 * 
+	 * @param newNode
+	 */
+	public void addFront(INode<K> newNode) {
+		if (this.tail == null) {
+			this.tail = newNode;
+		}
+		if (this.head == null) {
+			this.head = newNode;
+		} else {
+			INode<K> tempNode = this.head;
+			this.head = newNode;
+			this.head.setNext(tempNode);
+		}
+	}
+
+	/**
 	 * method to print nodes
 	 */
 	public void printMyNodes() {
