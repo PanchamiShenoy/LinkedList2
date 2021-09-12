@@ -29,6 +29,23 @@ public class LinkedList<K> {
 	}
 
 	/**
+	 * to add element at the end of linked list
+	 * 
+	 * @param newNode
+	 */
+	public void append(INode<K> newNode) {
+		if (this.head == null) {
+			this.head = newNode;
+		}
+		if (this.tail == null) {
+			this.tail = newNode;
+		} else {
+			this.tail.setNext(newNode);
+			this.tail = newNode;
+		}
+	}
+
+	/**
 	 * method to print nodes
 	 */
 	public void printMyNodes() {
