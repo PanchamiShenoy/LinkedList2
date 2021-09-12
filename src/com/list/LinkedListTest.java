@@ -39,12 +39,26 @@ public class LinkedListTest {
 		LinkedList.insert(2, mySecondNode);
 		LinkedList.printMyNodes();
 	}
+	public static void deleteFront()
+	{
+		Node<Integer> myFirstNode = new Node<>(70);
+		Node<Integer> mySecondNode = new Node<>(30);
+		Node<Integer> myThirdNode = new Node<>(56);
+		
+		LinkedList<Integer> LinkedList = new LinkedList<Integer>();
+		LinkedList.addFront(myFirstNode);
+		LinkedList.addFront(mySecondNode);
+		LinkedList.addFront(myThirdNode);
+		LinkedList.deleteFront();
+		LinkedList.printMyNodes();
+	}
 
 	public static void main(String[] args) {
 		// createLinkedlist();
 		// addNewNode();
 		// appendNode();
-		insertBetween();
+		//insertBetween();
+		deleteFront();
 	}
 
 }
