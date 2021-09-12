@@ -87,7 +87,17 @@ public class LinkedList<K> {
 		System.out.println("the data deleted is" + curNode.getKey());
 		prevNode.setNext(null);
 	}
-
+public void search(K key) {
+	INode<K> tempNode = head;
+	int count=0;
+	while(tempNode != null) {
+		count++;
+		if (tempNode.getKey().equals(key)){
+			System.out.println(key+"is at "+count+"position");
+		}
+		tempNode = tempNode.getNext();
+	}
+}
 	/**
 	 * method to print nodes
 	 */

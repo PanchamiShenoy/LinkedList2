@@ -65,6 +65,19 @@ public class LinkedListTest {
 		LinkedList.deleteLast();
 		LinkedList.printMyNodes();
 	}
+	public static void search()
+	{
+		Node<Integer> myFirstNode = new Node<>(70);
+		Node<Integer> mySecondNode = new Node<>(30);
+		Node<Integer> myThirdNode = new Node<>(56);
+		
+		LinkedList<Integer> LinkedList = new LinkedList<Integer>();
+		LinkedList.addFront(myFirstNode);
+		LinkedList.append(mySecondNode);
+		LinkedList.append(myThirdNode);
+		LinkedList.search(56);
+		LinkedList.printMyNodes();
+	}
 
 	public static void main(String[] args) {
 		// createLinkedlist();
@@ -72,7 +85,9 @@ public class LinkedListTest {
 		// appendNode();
 		//insertBetween();
 		//deleteFront();
-		deleteLast();
+		//deleteLast();
+		search();
+		
 	}
 
 }
