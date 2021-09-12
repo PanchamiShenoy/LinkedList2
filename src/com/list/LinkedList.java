@@ -65,6 +65,11 @@ public class LinkedList<K> {
 		newNode.setNext(tempNode);
 	}
 
+	public void deleteFront() {
+		INode<K> tempNode = this.head;
+		System.out.println("the data deleted is"+tempNode.getKey());
+		this.head = head.getNext();
+	}
 	/**
 	 * method to print nodes
 	 */
