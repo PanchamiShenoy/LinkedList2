@@ -46,6 +46,26 @@ public class LinkedList<K> {
 	}
 
 	/**
+	 * insert element at specified position
+	 * 
+	 * @param myNode
+	 * @param newNode
+	 */
+	public void insert(int pos, INode<K> newNode) {
+		INode<K> tempNode = this.head;
+		INode<K> prev = this.head;
+		int count = 1;
+		while (count < pos) {
+			prev = tempNode;
+			tempNode = tempNode.getNext();
+			count++;
+
+		}
+		prev.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
+
+	/**
 	 * method to print nodes
 	 */
 	public void printMyNodes() {
