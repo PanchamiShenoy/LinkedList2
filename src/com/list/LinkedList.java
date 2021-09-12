@@ -122,6 +122,23 @@ public class LinkedList<K> {
 	}
 
 	/**
+	 * method to delete the specified node
+	 * 
+	 * @param key
+	 */
+	public void deleteSpecified(K key) {
+
+		INode<K> curNode = head;
+		INode<K> prevNode = null;
+
+		while (curNode != null && curNode.getKey() != key) {
+			prevNode = curNode;
+			curNode = curNode.getNext();
+		}
+		prevNode.setNext(curNode.getNext());
+	}
+
+	/**
 	 * method to print nodes
 	 */
 	public void printMyNodes() {
